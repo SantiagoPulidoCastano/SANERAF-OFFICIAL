@@ -30,7 +30,7 @@ html,body{
   margin: 0;
 }
 
-body {
+body{
   display:flex;
   flex-direction: column;
   background-color: var(--surface);
@@ -51,7 +51,7 @@ main{
   font-size: 1.5em
 }
 
-.carrito {
+.carrito{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,7 +85,7 @@ nav ul{
   grid-column: 2;
 }
 
-nav a {
+nav a{
   color: var(--black);
   text-decoration: none;
   font-weight: bold;

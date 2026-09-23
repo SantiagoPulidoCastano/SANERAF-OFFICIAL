@@ -1,31 +1,15 @@
 :root{
-  --surface: #fff;
-  --surface-2: #f5f0e8;
-  --black: #000;
-  --white: #fff;
-  --bg: #FFFDF5;
-  --bg-warm: #f5f0e8;
-  --yellow: #FFD23F;
-  --yellow-light: #FFF3C4;
-  --pink: #FF6B6B;
-  --strong-pink: #FF5C8A;
-  --electric-blue: #4D5CFF;
-  --pink-light: #FFE0E0;
-  --blue: #74B9FF;
-  --blue-light: #E3F2FD;
-  --green: #88D498;
-  --green-light: #E8F5E9;
-  --orange: #FFA552;
-  --orange-light: #FFF0E0;
-  --electric-purple: #6D28D9;
-  --purple: #B8A9FA;
-  --purple-light: #F0ECFF;
-  --cyan: #7FDBDA;
-  --red: #FF4444;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'Space Mono', monospace;
-  --font-display: 'Syne', sans-serif;
-  --font-logo: 'Carter One';
+  --surface: #FFFFFF;
+  --surface-2: #F7F7F5;
+  --bg: #F7F7F5;
+  --black: #0D0D0D;
+  --white: #FFFFFF;
+  --yellow: #FFC14D;
+  --yellow-light: #FFCE6C;
+  --yellow-dark: #E9A92F;
+  --gray: #414141;
+  --gray-light: #E5E5E5;
+
 }
 
 html,body{
@@ -50,7 +34,7 @@ main{
 .logo{
   display: flex;
   margin: 0;
-  font-family: 'Carter One', cursive;
+  font-family: 'Syne', cursive;
   font-size: 1.5em
 }
 
@@ -168,11 +152,11 @@ footer{
   overflow: hidden;
 }
 
-footer h2 {
+footer h2{
     margin: 0 0 15px;
 }
 
-footer p {
+footer p{
     margin: 5px 0;
 }
 

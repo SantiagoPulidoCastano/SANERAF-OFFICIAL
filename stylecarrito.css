@@ -30,7 +30,7 @@ html,body{
   margin: 0;
 }
 
-body {
+body{
   display:flex;
   flex-direction: column;
   background-color: var(--surface);
@@ -91,7 +91,13 @@ nav ul li a:hover{
   box-shadow: 4px 4px 0px #000;
 }
 
-.compras {
+
+nav ul li:nth-child(4) {
+  position: absolute;
+  right: 3rem;
+}
+
+.compras{
   max-width: 70%;
   margin: 2rem auto;
   padding: 0 2rem 2rem;

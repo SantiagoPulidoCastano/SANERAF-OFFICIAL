@@ -7,41 +7,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Santiago Pulido Castaño">
   <link rel="stylesheet" href="stylelogin.css">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Bebas+Neue&amp;family=Carter+One&amp;family=DM+Sans:wght@400;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;700&amp;family=Outfit:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Space+Mono:wght@400;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Bebas+Neue&amp;family=Carter+One&amp;family=Anton&amp;family=DM+Sans:wght@400;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;700&amp;family=Outfit:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Space+Mono:wght@400;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav> 
-    <div id="progress-bar"></div>
-    <a href="index.html" class="logo" alt="logo">SANERAF</a>
-  </nav>
-
+ 
 <main>
+
     <div class="login" id="login">
-      <h2> Registrate o Inicia sesión para continuarr</h2>
+
+    <div class="login-imagen" id="login-imagen"> <img src="IMG/Vertical.png" alt="Imagen de SANERAF"> </div>
+      <div class="login-formulario" id="login-formulario">
+      <h2> Inicia sesión para continuar:</h2>
       <form action="index.html" method="get">
 
-      <label for="username"><strong>Nombre de usuario:</strong></label><br><br>
-      <input type="text" id="username" placeholder="Usuario" required><br><br>
+      <label for="username"><strong>Nombre de usuario:</strong></label>
+      <input type="text" id="username" placeholder="Usuario" required>
 
-      <label for="password"><strong>Contraseña:</strong></label><br><br>
-      <input type="password" id="password" placeholder="Contraseña" required><br><br>
+      <label for="password"><strong>Contraseña:</strong></label>
+      <input type="password" id="password" placeholder="Contraseña" required>
 
-      <button type="submit" id="entrar">Entrar</button><br><br>
-
-      <a href="pterminos.html" id="pterms" class="pterms" alt="pterms">Terminos y condiciones</a>
+      <button type="submit" id="entrar">Entrar</button>
 
       <a href="registro.html" id="registro" class="registro" alt="registro">¿No tienes cuenta? Registrate</a>
+
+      <a href="recuperar.html" id="recuperar" class="recuperar" alt="recuperar">¿Olvidaste tu contraseña?</a>
+
+      <a href="productos.html" id="volver" class="volver" alt="volver">Volver</a>
       </form>
     </div>
-</main>
-
-<footer>
-    <div class="derechos" id="derechos">
-      <h2>Derechos de Autor</h2>
-      <p>Todos los derechos reservados ©2026 SANERAF. <br> Prohibida la reproducción total o parcial de este sitio web sin autorización expresa.</p>
     </div>
-  </footer>
+</main>
+<a href="pterminos.html" id="pterms" class="pterms" alt="pterms">Terminos y condiciones</a>
 
 <script script src="functions.js"></script>
 
