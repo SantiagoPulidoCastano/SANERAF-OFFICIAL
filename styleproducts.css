@@ -19,10 +19,10 @@
   --purple-light: #F0ECFF;
   --cyan: #7FDBDA;
   --red: #FF4444;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Anton', sans-serif;
   --font-mono: 'Space Mono', monospace;
   --font-display: 'Syne', sans-serif;
-  --font-logo: 'Carter One';
+  --font-logo: 'Carter One'
 }
 
 html,body{
@@ -47,7 +47,7 @@ main{
 .logo{
   display: flex;
   margin: 0;
-  font-family: 'Carter One', cursive;
+  font-family: 'Carter One', sans-serif;
   font-size: 1.5em
 }
 
@@ -98,132 +98,89 @@ nav ul li:nth-child(3) {
   position: absolute;
   right: 2rem;
 }
+
 nav ul li:nth-child(4) {
+  position: absolute;
+  right: 10rem;
+}
+
+nav ul li:nth-child(5) {
   position: absolute;
   right: 6rem;
 }
 
 nav ul li a:hover{
-  background-color: var(--yellow);
+  background-color: var(--surface-2);
   border: var(--black);
   border-width: 4px;
   border-style: solid;
-  box-shadow: 4px 4px 0px --black;
+  border-radius: 1rem;
 }
 
-#Destacado{
+.galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.galeria section {
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  padding-bottom: 25px;
+  overflow: hidden;
   max-width: 70%;
   margin: 2rem auto;
-  padding: 0 2rem 2rem;
   background-color: var(--surface);
   border:4px solid #000;
-  border-radius: 1px;
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 6px 6px 0px #000;
   overflow: hidden;
 }
 
-
-#Destacado h2{
-  color: var(--black);
-  background-color: var(--orange);
-  text-decoration-color: var(--black);
-  text-decoration-thickness: 20px;
-  font-weight: bold;
-  font-size: 1.1em;
-  border: none;
-  border-bottom: 5px solid var(--black);
-  padding: 1rem;
-  margin: 0 -2rem 1.5rem;
-}
-
-#Nuevo{
-  max-width: 70%;
-  margin: 2rem auto;
-  padding: 0 2rem 2rem;
-  background-color: var(--surface);
-  border:4px solid #000;
-  border-radius: 1px;
+.galeria section h2 {
+  width: 100%;
+  margin: 0 0 25px 0;
+  padding: 12px 0;
   text-align: center;
-  box-shadow: 6px 6px 0px #000;
-  overflow: hidden;
-}
-
-#Nuevo h2{
   color: var(--black);
-  background-color: var(--green);
+  background-color: var(--surface-2);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1em;
   border: none;
   border-bottom: 5px solid var(--black);
-  padding: 1rem;
-  margin: 0 -2rem 1.5rem;
 }
 
-.galeria{
+.galeria section .contenedor-imagenes {
   display: flex;
+  flex-direction: row;    
   justify-content: center;
   align-items: center;
-  gap: 50px;
-  flex-wrap: wrap;
+  gap: 30px;          
+  flex-wrap: wrap;     
+  width: 100%;
+}
+
+.galeria img {
+  max-width: 160px;
+  height: 210px;
   object-fit: cover;
-}
-
-img.gogeta {
-  max-width: 150px;
-  height: 200px;
   display: block;
-  border-radius: 1px;
+  border-radius: 4px;
+  border: 3px solid var(--black);
   transform: rotate(-1deg);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: 3px solid var(--black);
 }
 
-#gogeta:hover{
+.galeria img:hover {
   box-shadow: 5px 5px 0px var(--black);
-}
-
-img.vegito{
-  max-width: 150px;
-  height: 200px;
-  display: block;
-  border-radius: 1px;
-  transform: rotate(-1deg);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: 3px solid var(--black);
-}
-
-#vegito:hover{
-box-shadow: 5px 5px 0px var(--black);
-}
-
-img.god{
-  max-width: 150px;
-  height: 200px;
-  display: block;
-  border-radius: 1px;
-  transform: rotate(-1deg);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: 3px solid var(--black);
-}
-
-#god:hover{
-box-shadow: 5px 5px 0px var(--black);
-}
-
-img.broly{ 
-  max-width: 150px;
-  height: 200px;
-  display: block;
-  border-radius: 1px;
-  transform: rotate(-1deg);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: 3px solid var(--black);
-}
-
-#broly:hover{
-box-shadow: 5px 5px 0px var(--black);
+  transform: rotate(0deg) scale(1.04);
 }
 
 
@@ -256,5 +213,5 @@ footer p{
   width: var(--scrollAmount);
   height: 5px;
   z-index: 9999;
-  background-image: linear-gradient(to right, var(--yellow), var(--orange)  ,var(--red));
+  background-image: linear-gradient(to right, var(--yellow), var(--surface)  ,var(--surface-2));
 }

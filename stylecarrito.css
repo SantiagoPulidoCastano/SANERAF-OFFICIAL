@@ -19,10 +19,10 @@
   --purple-light: #F0ECFF;
   --cyan: #7FDBDA;
   --red: #FF4444;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Anton', sans-serif;
   --font-mono: 'Space Mono', monospace;
   --font-display: 'Syne', sans-serif;
-  --font-logo: 'Carter One';
+  --font-logo: 'Carter One'
 }
 
 html,body{
@@ -49,7 +49,7 @@ main{
 .logo{
   display: flex;
   margin: 0;
-  font-family: 'Carter One', cursive;
+  font-family: 'Carter One', sans-serif;
   font-size: 1.5em
 }
 
