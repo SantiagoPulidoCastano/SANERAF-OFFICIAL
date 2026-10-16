@@ -145,3 +145,25 @@ body{
   background-color: var(--red);
   border: 0.3125rem solid var(--black);
 }
+
+dialog {
+  position: relative;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.btn-cerrar:hover {
+  color: #ff0000; /* Se pone roja al pasar el mouse */
+}

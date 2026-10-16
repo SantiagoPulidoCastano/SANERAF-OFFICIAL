@@ -96,8 +96,8 @@ nav ul li a:hover{
 }
 
 .banner{
-  min-height: 500px;
-  background-image: url(IMG/Mini.png);
+  min-height: 550px;
+  background-image: url(IMG/SANERAF-enhanced.gif);
   background-size: cover;
   background-position: center;
   display:flex;
