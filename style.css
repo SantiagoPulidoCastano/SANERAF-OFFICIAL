@@ -88,11 +88,13 @@ nav ul li:nth-child(2) {
 }
 
 nav ul li a:hover{
-  background-color: var(--surface-2);
-  border: #000;
+  background-color: var(--yellow);
+  border: var(--black);
   border-width: 4px;
   border-style: solid;
-  border-radius: 1rem;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--black);
+  
 }
 
 .banner{
@@ -130,8 +132,8 @@ nav ul li a:hover{
 }
 
 .conoce h2{
-  color: var(--black);
-  background-color: var(--surface-2);
+  color: var(--white);
+  background-color: var(--black);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1em;
@@ -142,7 +144,7 @@ nav ul li a:hover{
 }
 
 #conoceboton:hover{
-  background-color: var(--pink);
+  background-color: var(--red);
   border: #000;
   border-width: 5px;
   border-style: solid;

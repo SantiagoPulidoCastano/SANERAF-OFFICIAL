@@ -19,8 +19,7 @@
   --purple-light: #F0ECFF;
   --cyan: #7FDBDA;
   --red: #FF4444;
-  --font-body: 'Anton', sans-serif;
-  --font-mono: 'Space Mono', monospace;
+  --font-body: 'Space Mono', monospace;
   --font-display: 'Syne', sans-serif;
   --font-logo: 'Carter One';
 }
@@ -29,7 +28,7 @@ body{
   display:flex;
   flex-direction: column;
   background-color: var(--surface);
-  font-family:'Syne', sans-serif;
+  font-family: var(--font-body);
   margin: 0;
   min-height: 67.5rem; 
   overflow-x: hidden; 
@@ -43,7 +42,11 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--surface-2);
-    border: 4px solid var(--black);
+    border: var(--black);
+    border-width: 4px;
+    border-style: solid;
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px var(--black);
     overflow: hidden;
     border-radius: 1.25rem;
 }
@@ -78,6 +81,9 @@ body{
     padding: 1rem;
     text-align: center;
     margin-bottom: 2rem;
+    font-family: var(--font-display);
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .login-formulario a{
@@ -86,8 +92,11 @@ body{
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1em;
-  border:0.25rem solid #000;
-  border-radius: 1.25rem;
+  border: var(--black);
+  border-width: 4px;
+  border-style: solid;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--black);
   margin-bottom: 1rem;
   padding: 0.375rem;
 }
@@ -103,8 +112,12 @@ body{
 }
 
 .login-formulario a.volver:hover{
-  background-color: var(--pink);
-  border: 0.3125rem solid var(--black);
+  background-color: var(--red);
+  border: var(--black);
+  border-width: 4px;
+  border-style: solid;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--black);
 }
 
 
@@ -119,8 +132,12 @@ body{
 }
 
 .login-formulario a.recuperar:hover{
-  background-color: var(--bg-warm);
-  border: 0.3125rem solid var(--black);
+  background-color: var(--yellow);
+  border: var(--black);
+  border-width: 4px;
+  border-style: solid;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--black);
 }
     
 
@@ -133,8 +150,12 @@ body{
 }
 
 .login-formulario a.registro:hover{
-  background-color: var(--bg-warm);
-  border: 0.3125rem solid var(--black);;
+  background-color: var(--purple); 
+  border: var(--black);
+  border-width: 4px;
+  border-style: solid;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--black);
 }
 
 .login-formulario form{
@@ -150,9 +171,12 @@ body{
 
 .login-formulario input{
     padding: 0.8rem;
-    border-radius: 1.25rem;
     margin-bottom: 1.5rem;
-    border: 0.25rem solid var(--black);
+    border: var(--black);
+    border-width: 4px;
+    border-style: solid;
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px var(--black);
     font-family: 'Syne', sans-serif;
     font-size: 1rem;
     box-sizing: border-box;
@@ -165,17 +189,19 @@ body{
     font-weight: bold;
     align-self: center;
     padding: 0.35rem 1rem;
-    background-color: var(--surface);
-    border: 0.25rem solid var(--black);
+    border: var(--black);
+    border-width: 4px;
+    border-style: solid;
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px var(--black);
     cursor: pointer;
-    border-radius: 1.25rem;
     position: absolute;
     top: 24.7rem;
     right: 3.125rem;
 }
 
 .login-formulario button:hover{
-  background-color: var(--purple);
+  background-color: var(--blue);
   border: 0.3125rem solid var(--black);
 }
 

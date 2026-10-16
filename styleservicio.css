@@ -88,12 +88,14 @@ nav ul li:nth-child(2) {
 }
 
 nav ul li a:hover{
-  background-color: var(--surface-2);
-  border: #000;
+  background-color: var(--yellow);
+  border: var(--black);
   border-width: 4px;
   border-style: solid;
-  border-radius: 1rem;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--black);
 }
+
 
 .banner{
   min-height: 500px;
