@@ -402,6 +402,16 @@
     <label for="producto">Figura que desees en el catálogo:</label>
     <input type="text" id="producto" name="producto" placeholder="Nombre del producto" required>
 
+      <label for="imagen">Imagen de la figura (Opcional):</label>
+    <label for="imagen" class="label-archivo">Sube una imagen</label>
+    <input type="file" id="imagen" name="imagen" class="input-archivo" accept="image/*" required>
+
+    <div id="contenedor-preview" class="contenedor-preview" style="display: none;">
+      <img id="imagen-previsualizacion" src="" alt="Vista previa">
+      <button type="button" id="btn-quitar-imagen" class="btn-quitar">X</button>
+    </div>
+
+
     <button type="submit" id="enviar">Enviar Petición</button>
 
     <a href="productos.html" id="volver" class="volver">Volver</a>

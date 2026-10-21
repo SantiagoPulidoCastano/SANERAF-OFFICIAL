@@ -26,14 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const texto = document.getElementById('ventana-texto');
 
     // ==========================================
-    // 3. LÓGICA DE LOGIN (Busca dentro del form de login)
+    // 3. LÓGICA DE LOGIN
     // ==========================================
     const formLogin = document.querySelector('.login-formulario form');
     if (formLogin) {
         const inputUsuarioLogin = document.getElementById('username-login');
         const inputPasswordLogin = document.getElementById('password-login');
         
-        // Autocompletar el usuario guardado previamente
         const usuarioGuardado = localStorage.getItem('usuarioGuardado');
         if (usuarioGuardado && inputUsuarioLogin) {
             inputUsuarioLogin.value = usuarioGuardado;
@@ -48,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const usuarioRegistrado = localStorage.getItem('usuarioGuardado');
             const passwordRegistrada = localStorage.getItem('passwordGuardada');
 
-            // 1. Validar si los datos coinciden
             if (usuarioIngresado !== usuarioRegistrado || passwordIngresada !== passwordRegistrada) {
                 if (titulo) titulo.innerText = "Error de Acceso";
                 if (texto) texto.innerText = "Usuario o contraseña incorrectos. Verifica tus datos.";
@@ -60,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return; 
             }
             
-            // 2. Si todo es correcto -> Bienvenido 
             if (titulo) titulo.innerText = "¡Hola de nuevo!";
             if (texto) texto.innerText = `¡Bienvenido, ${usuarioIngresado}!`;
             
@@ -77,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 4. LÓGICA DE REGISTRO (Usa los nuevos IDs del formulario de registro)
+    // 4. LÓGICA DE REGISTRO
     // ==========================================
     const formRegistro = document.querySelector('.registro-formulario form');
     if (formRegistro) {
@@ -88,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const pass1 = document.getElementById('password-reg').value;
             const pass2 = document.getElementById('passwordconfirm-reg').value;
             
-            // Validar contraseñas iguales
             if (pass1 !== pass2) {
                 if (titulo) titulo.innerText = "Error";
                 if (texto) texto.innerText = "Las contraseñas no coinciden. Por favor, revísalas.";
@@ -101,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return; 
             }
             
-            // Guardar usuario y contraseña
             if (inputUsuarioReg) {
                 localStorage.setItem('usuarioGuardado', inputUsuarioReg.value.trim());
                 localStorage.setItem('passwordGuardada', pass1);
@@ -149,4 +144,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         spanPrecio.textContent = formateadorCOP.format(precioFinal);
     });
+
+    // ==========================================
+    // 6. PREVISUALIZACIÓN DE IMAGEN Y BOTÓN QUITAR (X)
+    // ==========================================
+    const inputImagen = document.getElementById('imagen');
+    const previewImg = document.getElementById('imagen-previsualizacion');
+    const contenedorPreview = document.getElementById('contenedor-preview');
+    const btnQuitar = document.getElementById('btn-quitar-imagen');
+
+    if (inputImagen && previewImg && contenedorPreview && btnQuitar) {
+        inputImagen.addEventListener('change', function(event) {
+            const archivo = event.target.files[0];
+            if (archivo) {
+                previewImg.src = URL.createObjectURL(archivo);
+                contenedorPreview.style.display = 'block'; 
+            }
+        });
+
+        btnQuitar.addEventListener('click', function() {
+            inputImagen.value = ''; 
+            previewImg.src = ''; 
+            contenedorPreview.style.display = 'none'; 
+        });
+    }
 });

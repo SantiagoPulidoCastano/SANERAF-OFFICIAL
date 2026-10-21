@@ -318,7 +318,7 @@ nav ul li:nth-child(2) a:hover {
 }
 
 .ayuda-vitrina form input,
-.ayuda-vitrina form button,
+.ayuda-vitrina form button:not(.btn-quitar),
 .ayuda-vitrina form .volver {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.95rem;
@@ -374,6 +374,98 @@ nav ul li:nth-child(2) a:hover {
   transform: translate(-2px, -2px);
   box-shadow: 5px 5px 0px var(--black);
 }
+
+.input-archivo {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.label-archivo {
+  font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  border: 3px solid var(--black);
+  border-radius: 0px;
+  background-color: var(--white);
+  color: var(--black);
+  box-shadow: 3px 3px 0px var(--black);
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.label-archivo:hover {
+  background-color: var(--orange);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--black);
+}
+
+.label-archivo:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--black);
+}
+
+.contenedor-preview {
+  position: relative;
+  display: none;
+  width: 120px;
+  height: 120px;
+  margin: 15px auto;
+}
+
+#imagen-previsualizacion {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid var(--black);
+  box-shadow: 4px 4px 0px var(--black);
+  background-color: var(--white);
+  display: block;
+}
+
+.btn-quitar {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 26px;
+  height: 26px;
+  background-color: var(--red);
+  color: var(--black);
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 2px solid var(--black);
+  box-shadow: 2px 2px 0px var(--black);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 10;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-quitar:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--black);
+}
+
+.btn-quitar:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--black);
+}
+
 
 /* ==========================================
    FOOTER Y BARRA DE PROGRESO
