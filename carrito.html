@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>SANERAF</title>
+  <title>Carrito de Compras - SANERAF</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Santiago Pulido Castaño">
   <link rel="stylesheet" href="stylecarrito.css">
@@ -13,101 +13,86 @@
 <body>
 
   <nav> 
-     <div id="progress-bar"></div>
-   <a href="#" class="logo" alt="logo">SANERAF</a>
+    <div id="progress-bar"></div>
+    <a href="productos.html" class="logo" alt="logo">SANERAF</a>
     <ul>
       <li><a href="productos.html">Volver</a></li>
-
-      <li><a href="#derechos">Derechos de Autor</a></li>
-
-      <li><a href="login.html">Iniciar Sesión</a></li>
-      
-      <li><a href="#toggle">🌘</a></li>
-
+      <li><a href="login.html" class="login">Iniciar Sesión</a></li>
     </ul>
   </nav>
 
-<main>
-        
-    <section class="compras" id="compras">
-      <h1>Tu carrito está vacio, inicia sesión para ver tus productos seleccionados si no lo has hecho, si ya lo hiciste debes seleccionar al menos un producto para meterlo en tu carrito de compras.</h1>       
-    </section>
-
-    <!--Contenido principal-->
-    <main class="contenido-carrito">
-        
-        <!--Producto 1-->
-        <article class="producto-carrito">
-          <div class="producto-imagen">
-            <img src="IMG/broly.jpg" width="250px" height="250px" alt="broly">
-          </div>
-          <div class="producto info">
-            <h3> Figura articulable de Broly </h3>
-            <p> Figura espectacular para los fanaticos de la serie </p>
-            <span class="precio">
-              $200.000
-            </span>
-          </div>
-          
-          <div class="cantidad"> 
-            <button type="button">
-            - 
-          </button>
-          <span>1</span>
-          <button type="button">
-            +
-          </button>
-        </div>
-        </article>
-
-         <!--Producto 2-->
-        <article class="producto-carrito">
-          <div class="producto-imagen">
-            <img src="IMG/Vegito.jpg" width="250px" height="250px" alt="Vegito">
-          </div>
-          <div class="producto info">
-            <h3> Figura articulable de Vegito </h3>
-            <p> Figura espectacular para los fanaticos de la serie </p>
-            <span class="precio">
-              $200.000
-            </span>
-          </div>
-          
-          <div class="cantidad"> 
-            <button type="button">
-            - 
-          </button>
-          <span>1</span>
-          <button type="button">
-            +
-          </button>
-        </div>
-        </article>
-
-        <!--Resumen-->
-        <div class="Resumen-carrito">
-        <div>
-          <span> Envio:</span>
-          <b> Por calcular </b>
-        </div>
-
-        <div class="Total">
-          <span> Total estimado: </span>
-
-          <b> $200.000</b>
-          
-        </div>
-      </div>
+  <main>
+    <div class="contenedor-carrito-general">
+      
+      <!-- Banner informativo / Estado del carrito -->
+      <section class="compras" id="compras">
+        <h1>Tu Carrito de Compras</h1>
+        <p>Revisa tus piezas seleccionadas antes de proceder al pago o continúa explorando el catálogo.</p>
       </section>
 
-</main>
+      <!-- Listado de Productos en el Carrito -->
+      <div class="lista-productos">
+        
+        <!-- Producto 1 -->
+        <article class="producto-carrito">
+          <div class="producto-imagen">
+            <img src="IMG/broly.jpg" alt="Broly">
+          </div>
+          <div class="producto-info">
+            <h3>Figura articulable de Broly</h3>
+            <p>Figura espectacular para los fanáticos de la serie</p>
+            <span class="precio">$200.000</span>
+          </div>
+          <div class="cantidad-container">
+            <button type="button" class="btn-cantidad">-</button>
+            <span>1</span>
+            <button type="button" class="btn-cantidad">+</button>
+          </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="producto-carrito">
+          <div class="producto-imagen">
+            <img src="IMG/Vegito.jpg" alt="Vegito">
+          </div>
+          <div class="producto-info">
+            <h3>Figura articulable de Vegito</h3>
+            <p>Figura espectacular para los fanáticos de la serie</p>
+            <span class="precio">$200.000</span>
+          </div>
+          <div class="cantidad-container">
+            <button type="button" class="btn-cantidad">-</button>
+            <span>1</span>
+            <button type="button" class="btn-cantidad">+</button>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Resumen de Compra -->
+      <section class="Resumen-carrito">
+        <h2>Resumen de la Orden</h2>
+        <div class="resumen-fila">
+          <span>Envío:</span>
+          <b>Por calcular</b>
+        </div>
+        <div class="resumen-fila Total">
+          <span>Total estimado:</span>
+          <b>$400.000</b>
+        </div>
+        <button type="button" class="btn-pagar">Proceder al Pago</button>
+      </section>
+
+    </div>
+  </main>
+
   <footer>
     <div class="derechos" id="derechos">
       <h2>Derechos de Autor</h2>
-      <p>Todos los derechos reservados ©2026 SANERAF. <br> Prohibida la reproducción total o parcial de este sitio web sin autorización expresa.</p>
+      <p>Todos los derechos reservados © 2026 SANERAF. <br> Prohibida la reproducción total o parcial de este sitio web sin autorización expresa.</p>
     </div>
   </footer>
 
-<script script src="functions.js"></script>
+  <script src="functions.js"></script>
+</body>
 </html>
-

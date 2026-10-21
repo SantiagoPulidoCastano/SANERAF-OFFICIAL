@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', processScroll);
 
     // ==========================================
-    // 2. REFERENCIAS GLOBALES PARA MODALES !!!POR AHORA NO TOCAR!!!
+    // 2. REFERENCIAS GLOBALES PARA MODALES
     // ==========================================
     const modal = document.getElementById('ventana');
     const modalCerrar = document.getElementById('ventana-cerrar');
@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const texto = document.getElementById('ventana-texto');
 
     // ==========================================
-    // 3. LÓGICA DE LOGIN !!!POR AHORA NO TOCAR!!!
+    // 3. LÓGICA DE LOGIN (Busca dentro del form de login)
     // ==========================================
-    const formLogin = document.getElementById('login');
+    const formLogin = document.querySelector('.login-formulario form');
     if (formLogin) {
-        const inputUsuarioLogin = formLogin.querySelector('input[type="text"]') || formLogin.querySelector('input');
-        const inputPasswordLogin = formLogin.querySelector('input[type="password"]');
+        const inputUsuarioLogin = document.getElementById('username-login');
+        const inputPasswordLogin = document.getElementById('password-login');
         
         // Autocompletar el usuario guardado previamente
         const usuarioGuardado = localStorage.getItem('usuarioGuardado');
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formLogin.addEventListener('submit', (evento) => {
             evento.preventDefault();
             
-            const usuarioIngresado = inputUsuarioLogin ? inputUsuarioLogin.value : "";
+            const usuarioIngresado = inputUsuarioLogin ? inputUsuarioLogin.value.trim() : "";
             const passwordIngresada = inputPasswordLogin ? inputPasswordLogin.value : "";
             
             const usuarioRegistrado = localStorage.getItem('usuarioGuardado');
@@ -77,16 +77,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 4. LÓGICA DE REGISTRO !!!POR AHORA NO TOCAR!!!
+    // 4. LÓGICA DE REGISTRO (Usa los nuevos IDs del formulario de registro)
     // ==========================================
-    const formRegistro = document.getElementById('registro');
+    const formRegistro = document.querySelector('.registro-formulario form');
     if (formRegistro) {
         formRegistro.addEventListener('submit', (evento) => {
             evento.preventDefault();
             
-            const inputUsuarioReg = formRegistro.querySelector('input[type="text"]') || formRegistro.querySelector('input');
-            const pass1 = document.getElementById('password').value;
-            const pass2 = document.getElementById('passwordconfirm').value;
+            const inputUsuarioReg = document.getElementById('username-reg');
+            const pass1 = document.getElementById('password-reg').value;
+            const pass2 = document.getElementById('passwordconfirm-reg').value;
             
             // Validar contraseñas iguales
             if (pass1 !== pass2) {
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Guardar usuario y contraseña
             if (inputUsuarioReg) {
-                localStorage.setItem('usuarioGuardado', inputUsuarioReg.value);
+                localStorage.setItem('usuarioGuardado', inputUsuarioReg.value.trim());
                 localStorage.setItem('passwordGuardada', pass1);
             }
 
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 5. CONFIGURACIÓN Y PRECIOS DE TIENDA !!!USENLO PARA ASIGNAR DESCUENTOS GLOBALES Y PRECIOS POR DEFECTO!!!
+    // 5. CONFIGURACIÓN Y PRECIOS DE TIENDA
     // ==========================================
     const CONFIG_TIENDA = {
         precioEstandarPorDefecto: 120000, 

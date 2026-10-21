@@ -13,31 +13,30 @@
 <body>
  
 <main>
-
     <div class="login" id="login">
-
-    <div class="login-imagen" id="login-imagen"> <img src="IMG/Vertical.png" alt="Imagen de SANERAF"> </div>
+      <div class="login-imagen" id="login-imagen"> 
+        <img src="IMG/Vertical.png" alt="Imagen de SANERAF"> 
+      </div>
       <div class="login-formulario" id="login-formulario">
-      <h2> Inicia sesión para continuar:</h2>
-      <form action="index.html" method="get">
+        <h2>Inicia sesión para continuar:</h2>
+        <form action="index.html" method="get">
 
-      <label for="username"><strong>Nombre de usuario:</strong></label>
-      <input type="text" id="username" placeholder="Usuario" required>
+          <label for="username-login"><strong>Nombre de usuario:</strong></label>
+          <input type="text" id="username-login" name="username" placeholder="Usuario" required>
 
-      <label for="password"><strong>Contraseña:</strong></label>
-      <input type="password" id="password" placeholder="Contraseña" required>
+          <label for="password-login"><strong>Contraseña:</strong></label>
+          <input type="password" id="password-login" name="password" placeholder="Contraseña" required>
 
-      <button type="submit" id="entrar">Entrar</button>
+          <button type="submit" id="entrar-login">Entrar</button>
 
-      <a href="registro.html" id="registro" class="registro" alt="registro">¿No tienes cuenta? Registrate</a>
-
-      <a href="recuperar.html" id="recuperar" class="recuperar" alt="recuperar">¿Olvidaste tu contraseña?</a>
-
-      <a href="productos.html" id="volver" class="volver" alt="volver">Volver</a>
-      </form>
-    </div>
+          <a href="registro.html" id="registro" class="registro" alt="registro">¿No tienes cuenta? Registrate</a>
+          <a href="recuperar.html" id="recuperar" class="recuperar" alt="recuperar">¿Olvidaste tu contraseña?</a>
+          <a href="productos.html" id="volver-login" class="volver" alt="volver">Volver</a>
+        </form>
+      </div>
     </div>
 </main>
+
 <a href="pterminos.html" id="pterms" class="pterms" alt="pterms">Terminos y condiciones</a>
 
 <dialog id="ventana">
@@ -46,7 +45,7 @@
   <p id="ventana-texto"></p>
 </dialog>
 
-<script script src="functions.js"></script>
+<script src="functions.js"></script>
 
 </body>
 </html>

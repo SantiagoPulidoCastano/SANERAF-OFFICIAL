@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>SANERAF</title>
+  <title>SANERAF - Registro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Santiago Pulido Castaño">
   <link rel="stylesheet" href="styleregistro.css">
@@ -13,34 +13,38 @@
 <body>
  
 <main>
-
     <div class="registro" id="registro">
-
-    <div class="registro-imagen" id="registro-imagen"> <img src="IMG/Vertical.png" alt="Imagen de SANERAF"> </div>
+      <div class="registro-imagen" id="registro-imagen">
+        <img src="IMG/Vertical.png" alt="Imagen de SANERAF">
+      </div>
+      
       <div class="registro-formulario" id="registro-formulario">
-      <h2> Registrate para continuar:</h2>
-      <form action="index.html" method="get">
+        <h2>Regístrate para continuar:</h2>
+        <form action="index.html" method="get">
 
-      <label for="name"><strong>Nombre:</strong></label>
-      <input type="text" id="name" placeholder="Juan Perez" required>
+          <label for="name-reg"><strong>Nombre:</strong></label>
+          <input type="text" id="name-reg" name="name" placeholder="Juan Perez" required>
 
-      <label for="username"><strong>Nombre de usuario:</strong></label>
-      <input type="text" id="username" placeholder="JuanPerez12" required>
+          <label for="username-reg"><strong>Nombre de usuario:</strong></label>
+          <input type="text" id="username-reg" name="username" placeholder="JuanPerez12" required>
 
-      <label for="password"><strong>Contraseña:</strong></label>
-      <input type="password" id="password" placeholder="Juan123" required>
+          <label for="password-reg"><strong>Contraseña:</strong></label>
+          <input type="password" id="password-reg" name="password" placeholder="Juan123" required>
 
-      <label for="passwordconfirm"><strong>Confirme su contraseña:</strong></label>
-      <input type="password" id="passwordconfirm" placeholder="Juan123" required>
+          <label for="passwordconfirm-reg"><strong>Confirme su contraseña:</strong></label>
+          <input type="password" id="passwordconfirm-reg" name="passwordconfirm" placeholder="Juan123" required>
 
-      <button type="submit" id="entrar">Entrar</button>
+          <div class="acciones-registro">
+            <button type="submit" id="entrar-reg">Entrar</button>
+            <a href="login.html" id="volver-reg" class="volver" alt="volver">Volver</a>
+          </div>
 
-      <a href="login.html" id="volver" class="volver" alt="volver">Volver</a>
-      </form>
-    </div>
+        </form>
+      </div>
     </div>
 </main>
-<a href="pterminos.html" id="pterms" class="pterms" alt="pterms">Terminos y condiciones</a>
+
+<a href="pterminos.html" id="pterms" class="pterms" alt="pterms">Términos y condiciones</a>
 
 <dialog id="ventana">
   <button type="button" id="ventana-cerrar" class="btn-cerrar">×</button>
@@ -48,7 +52,7 @@
   <p id="ventana-texto"></p>
 </dialog>
 
-<script script src="functions.js"></script>
+<script src="functions.js"></script>
 
 </body>
 </html>

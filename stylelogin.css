@@ -1,11 +1,12 @@
-:root{
+:root {
   --surface: #fff;
   --surface-2: #f5f0e8;
   --black: #000;
   --white: #fff;
   --bg: #FFFDF5;
-  --bg-warm: #f3e3c8;
+  --bg-warm: #f5f0e8;
   --yellow: #FFD23F;
+  --yellow-hover: #ffe600;
   --yellow-light: #FFF3C4;
   --pink: #FF6B6B;
   --pink-light: #FFE0E0;
@@ -18,197 +19,218 @@
   --purple: #B8A9FA;
   --purple-light: #F0ECFF;
   --cyan: #7FDBDA;
+  --grey: #F4F4F6;
   --red: #FF4444;
-  --font-body: 'Space Mono', monospace;
+  --font-body: 'Anton', sans-serif;
+  --font-mono: 'Space Mono', monospace;
   --font-display: 'Syne', sans-serif;
   --font-logo: 'Carter One';
 }
 
-body{
-  display:flex;
-  flex-direction: column;
-  background-color: var(--surface);
-  font-family: var(--font-body);
+html, body {
+  min-height: 100%;
   margin: 0;
-  min-height: 67.5rem; 
-  overflow-x: hidden; 
+  background-color: var(--grey);
 }
 
-.login{
-    width: 80%;
-    max-width: 75rem;
-    min-height: 9.375rem;
-    margin: 5rem auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: var(--surface-2);
-    border: var(--black);
-    border-width: 4px;
-    border-style: solid;
-    transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0px var(--black);
-    overflow: hidden;
-    border-radius: 1.25rem;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
 }
 
-
-.login-imagen{
-    min-height: 34.375rem;
-    border-right: 0.3135rem solid var(--black);
-    overflow: hidden;
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-
-.login-imagen img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+/* ==========================================
+   CONTENEDOR PRINCIPAL LOGIN
+   ========================================== */
+.login {
+  width: 100%;
+  max-width: 65rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--surface-2);
+  border: 4px solid var(--black);
+  box-shadow: 8px 8px 0px var(--black);
+  overflow: hidden;
+  border-radius: 1.25rem;
+  box-sizing: border-box;
 }
 
-.login-formulario{
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;    
-    min-height: 31.25rem;
+/* Imagen lateral */
+.login-imagen {
+  min-height: 32rem;
+  border-right: 4px solid var(--black);
+  overflow: hidden;
 }
 
-
-.login-formulario h2{
-    background-color: transparent;
-    padding: 1rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-family: var(--font-display);
-    font-weight: bold;
-    font-size: 1.5rem;
+.login-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.login-formulario a{
+/* Formulario */
+.login-formulario {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.login-formulario h2 {
+  background-color: transparent;
+  padding: 0;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.login-formulario form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-formulario label {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--black);
+}
+
+/* Inputs con foco interactivo */
+.login-formulario input {
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: 3.5px solid var(--black);
+  background-color: var(--white);
+  box-shadow: 4px 4px 0px var(--black);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  box-sizing: border-box;
+  outline: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.login-formulario input:focus {
+  background-color: var(--yellow-light);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--black);
+}
+
+/* Botón Entrar (Principal) */
+.login-formulario button {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border: 3.5px solid var(--black);
+  background-color: var(--blue);
+  color: var(--black);
+  box-shadow: 4px 4px 0px var(--black);
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+  width: 100%;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+}
+
+.login-formulario button:hover {
+  background-color: #55a3f5;
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px var(--black);
+}
+
+.login-formulario button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--black);
+}
+
+/* Grupo de Enlaces */
+.login-formulario a {
   color: var(--black);
   background-color: var(--white);
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1em;
-  border: var(--black);
-  border-width: 4px;
-  border-style: solid;
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0px var(--black);
-  margin-bottom: 1rem;
-  padding: 0.375rem;
+  font-size: 0.9rem;
+  border: 3px solid var(--black);
+  box-shadow: 3px 3px 0px var(--black);
+  margin-bottom: 0.8rem;
+  padding: 0.6rem;
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
 }
 
-.login-formulario a.volver{
-    min-width: 1rem;
-    max-width: 4rem;
-    position: absolute;
-    bottom: 0.0625rem;
-    right: 3.11rem;
-    left: auto;
-    padding: 0.4rem 0.8rem;
-}
-
-.login-formulario a.volver:hover{
-  background-color: var(--red);
-  border: var(--black);
-  border-width: 4px;
-  border-style: solid;
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0px var(--black);
-}
-
-
-.login-formulario a.recuperar{
-    min-width: 17rem;
-    max-width: 17rem;
-    position: absolute;
-    top: 24.65rem;
-    right: 16.5rem;
-    padding: 0.3rem 0.3rem;
-
-}
-
-.login-formulario a.recuperar:hover{
+/* Enlace Olvidaste tu contraseña */
+.login-formulario a.recuperar:hover {
   background-color: var(--yellow);
-  border: var(--black);
-  border-width: 4px;
-  border-style: solid;
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0px var(--black);
-}
-    
-
-.login-formulario a.registro{
-    min-width: 18rem;
-    max-width: 20rem;
-    position: absolute;
-    bottom: 0.0625rem;
-    left: 2.5rem
-}
-
-.login-formulario a.registro:hover{
-  background-color: var(--purple); 
-  border: var(--black);
-  border-width: 4px;
-  border-style: solid;
   transform: translate(-2px, -2px);
   box-shadow: 5px 5px 0px var(--black);
 }
 
-.login-formulario form{
-    display: flex;
-    flex-direction: column;
+/* Enlace Registro */
+.login-formulario a.registro:hover {
+  background-color: var(--purple);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--black);
 }
 
-
-.login-formulario label{
-    margin-bottom: 0.5rem;
+/* Enlace Volver */
+.login-formulario a.volver:hover {
+  background-color: var(--red);
+  color: var(--white);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--black);
 }
 
-
-.login-formulario input{
-    padding: 0.8rem;
-    margin-bottom: 1.5rem;
-    border: var(--black);
-    border-width: 4px;
-    border-style: solid;
-    transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0px var(--black);
-    font-family: 'Syne', sans-serif;
-    font-size: 1rem;
-    box-sizing: border-box;
+.login-formulario a:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--black);
 }
 
-
-.login-formulario button {
-    font-family: 'Syne', sans-serif;
-    font-size: large;
-    font-weight: bold;
-    align-self: center;
-    padding: 0.35rem 1rem;
-    border: var(--black);
-    border-width: 4px;
-    border-style: solid;
-    transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0px var(--black);
-    cursor: pointer;
-    position: absolute;
-    top: 24.7rem;
-    right: 3.125rem;
+/* Enlace Términos y Condiciones fuera de la tarjeta */
+a.pterms {
+  display: inline-block;
+  margin: 1.5rem auto 2rem auto;
+  color: var(--black);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.15s ease;
 }
 
-.login-formulario button:hover{
-  background-color: var(--blue);
-  border: 0.3125rem solid var(--black);
+a.pterms:hover {
+  color: var(--red);
 }
 
+/* Ventana emergente (Modal / Dialog) */
 dialog {
   position: relative;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 2rem;
+  border: 4px solid var(--black);
+  box-shadow: 8px 8px 0px var(--black);
+  border-radius: 0px;
+  background-color: var(--white);
+  max-width: 400px;
 }
 
 .btn-cerrar {
@@ -217,12 +239,12 @@ dialog {
   right: 12px;
   background: none;
   border: none;
-  font-size: 22px;
+  font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  color: #333;
+  color: var(--black);
 }
 
 .btn-cerrar:hover {
-  color: #ff0000; 
+  color: var(--red);
 }
