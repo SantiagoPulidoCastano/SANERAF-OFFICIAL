@@ -1,4 +1,5 @@
 :root{
+    /* Colores y fuentes centralizados para poder reutilizarlos en toda la página. */
   --surface: #fff;
   --surface-2: #f5f0e8;
   --black: #000;
@@ -26,6 +27,7 @@
 }
 
 html,body{
+    /* Restablece márgenes y define el tamaño mínimo del documento. */
   min-height: 100%;
   margin: 0;
 }
@@ -52,6 +54,7 @@ main{
 }
 
 nav{
+    /* Mantiene la navegación visible mientras se recorre el contenido. */
   position:sticky;
   top: 0;
   z-index: 1;
@@ -82,6 +85,7 @@ nav a{
 }
 
 .banner{
+    /* Franja con imagen de fondo que ofrece un acceso visual al catálogo. */
   min-height: 500px;
   background-image: url(IMG/Mini.png);
   background-size: cover;
@@ -132,6 +136,7 @@ nav a{
 }
 
 .terminos{
+    /* Este panel separa el texto legal del fondo y facilita su lectura. */
   max-width: 70%;
   margin: 2rem auto;
   padding: 0 2rem 2rem;
@@ -156,6 +161,7 @@ nav a{
 }
 
 .opciones-terminos{
+    /* Coloca juntas las respuestas para que la persona elija una sola. */
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -182,6 +188,7 @@ nav a{
 }
 
 #idacepto:checked + span{
+    /* El color muestra cuál de las dos respuestas está seleccionada. */
   background-color: var(--orange);
 }
 
@@ -200,6 +207,7 @@ nav a{
 
 
 #login{
+    /* Da estilo al enlace que permite regresar al inicio de sesión. */
   color: var(--black);
   background-color: var(--white);
   text-decoration: none;
@@ -222,6 +230,7 @@ nav a{
 }
 
 footer{
+    /* El pie muestra la autoría y la barra superior acompaña el avance de lectura. */
   height: 130px;
   min-height: 130px;
   max-height: 130px;

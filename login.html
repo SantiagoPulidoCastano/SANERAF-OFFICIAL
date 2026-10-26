@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- La cabecera configura el idioma, la vista móvil y los estilos del inicio de sesión. -->
   <meta charset="UTF-8">
   <title>SANERAF</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,13 @@
 <body>
  
 <main>
+  <!-- El bloque principal combina una imagen con el formulario para entrar a la cuenta. -->
     <div class="login" id="login">
       <div class="login-imagen" id="login-imagen"> 
         <img src="IMG/Vertical.png" alt="Imagen de SANERAF"> 
       </div>
       <div class="login-formulario" id="login-formulario">
+        <!-- El formulario recoge el usuario y la contraseña para validarlos con JavaScript. -->
         <h2>Inicia sesión para continuar:</h2>
         <form action="index.html" method="get">
 
@@ -39,6 +42,7 @@
 
 <a href="pterminos.html" id="pterms" class="pterms" alt="pterms">Terminos y condiciones</a>
 
+<!-- El cuadro emergente muestra el resultado de la comprobación de acceso. -->
 <dialog id="ventana">
   <button type="button" id="ventana-cerrar" class="btn-cerrar">×</button>
   <h3 id="ventana-titulo"></h3>

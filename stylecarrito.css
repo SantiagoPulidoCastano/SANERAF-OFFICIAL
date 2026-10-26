@@ -1,4 +1,5 @@
 :root {
+    /* Colores y fuentes compartidos para mantener un estilo coherente en el carrito. */
   --surface: #fff;
   --surface-2: #f5f0e8;
   --black: #000;
@@ -28,6 +29,7 @@
 }
 
 html, body {
+    /* Elimina márgenes por defecto y establece el fondo y la altura mínima. */
   min-height: 100%;
   margin: 0;
   background-color: var(--grey);
@@ -43,6 +45,7 @@ body {
 }
   
 main {
+    /* Deja que el contenido principal use el espacio libre de la página. */
   flex: 1;
 }
 
@@ -59,6 +62,7 @@ main {
    NAVEGACIÓN UNIFICADA
    ========================================== */
 nav {
+    /* Mantiene la navegación arriba y distribuye el logotipo y los enlaces. */
   position: sticky;
   top: 0;
   z-index: 10;
@@ -130,6 +134,7 @@ nav ul li a.login {
    ESTRUCTURA GENERAL DEL CARRITO
    ========================================== */
 .contenedor-carrito-general {
+    /* Centra el contenido del carrito y limita su ancho para facilitar la lectura. */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,6 +146,7 @@ nav ul li a.login {
 
 /* Banner de bienvenida / estado */
 .compras {
+    /* Destaca el título y el mensaje que orientan a quien revisa la compra. */
   width: 100%;
   background-color: var(--yellow);
   border: 4px solid var(--black);
@@ -165,6 +171,7 @@ nav ul li a.login {
 }
 
 .lista-productos {
+    /* Apila los productos y conserva una separación entre cada uno. */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -173,6 +180,7 @@ nav ul li a.login {
 
 /* Tarjeta individual de producto en el carrito */
 .producto-carrito {
+    /* Ordena imagen, descripción y cantidad dentro de la tarjeta del producto. */
   width: 100%;
   display: flex;
   align-items: center;
@@ -187,6 +195,7 @@ nav ul li a.login {
 }
 
 .producto-imagen img {
+    /* Mantiene las imágenes de los artículos en un tamaño uniforme. */
   width: 90px;
   height: 110px;
   object-fit: cover;
@@ -218,6 +227,7 @@ nav ul li a.login {
 
 /* Etiqueta de precio */
 .precio {
+    /* Hace que el precio sea fácil de encontrar dentro de la tarjeta. */
   font-size: 1rem;
   font-weight: 900;
   font-family: 'Space Mono', monospace;
@@ -233,6 +243,7 @@ nav ul li a.login {
 
 /* Controles de cantidad (+ / -) */
 .cantidad-container {
+    /* Agrupa los botones y el número que representan la cantidad elegida. */
   display: flex;
   align-items: center;
   border: 3px solid var(--black);
@@ -265,6 +276,7 @@ nav ul li a.login {
    RESUMEN DEL CARRITO
    ========================================== */
 .Resumen-carrito {
+    /* Reúne los costos estimados y la acción para avanzar al pago. */
   width: 100%;
   background-color: var(--white);
   border: 4px solid var(--black);
@@ -302,6 +314,7 @@ nav ul li a.login {
 
 /* Botón de pagar */
 .btn-pagar {
+    /* El botón principal permite continuar con la compra. */
   background-color: var(--green);
   color: var(--black);
   font-family: 'Archivo Black', sans-serif;
@@ -330,6 +343,7 @@ nav ul li a.login {
    FOOTER Y BARRA DE PROGRESO
    ========================================== */
 footer {
+    /* El pie muestra información legal; la barra superior representa el avance al desplazarse. */
   height: 130px;
   min-height: 130px;
   max-height: 130px;

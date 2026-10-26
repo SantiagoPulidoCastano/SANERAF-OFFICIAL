@@ -1,4 +1,5 @@
 :root{
+    /* Colores y fuentes compartidos para dar unidad visual a la página. */
   --surface: #fff;
   --surface-2: #f5f0e8;
   --black: #000;
@@ -27,6 +28,7 @@
 }
 
 html,body{
+    /* Ajustes básicos para que la página ocupe el alto disponible sin márgenes extra. */
   min-height: 100%;
   margin: 0;
 }
@@ -53,6 +55,7 @@ main{
 }
 
 nav{
+    /* La barra queda arriba y organiza la marca junto a los enlaces de navegación. */
   position:sticky;
   top: 0;
   z-index: 1;
@@ -98,6 +101,7 @@ nav ul li a:hover{
 
 
 .banner{
+    /* La imagen de fondo presenta visualmente la sección de servicio al cliente. */
   min-height: 500px;
   background-image: url(IMG/Mini.png);
   background-size: cover;
@@ -110,6 +114,7 @@ nav ul li a:hover{
 }
 
 .Solicitud-servicio{
+    /* Este panel centra y reúne las opciones de atención al cliente. */
   width: 100%;
   display: flex;
   flex-direction: column; 
@@ -149,6 +154,7 @@ nav ul li a:hover{
 }
 
 .lista-servicios {
+      /* Los botones se apilan para que cada tipo de ayuda sea fácil de elegir. */
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -168,11 +174,13 @@ nav ul li a:hover{
 }
 
 .lista-servicios button:hover {
+    /* El cambio de color indica visualmente que la opción puede presionarse. */
   background-color: var(--pink);
   border: 0.3125rem solid var(--black);
 }
 
 #Diagnostico{
+    /* Estas reglas ubican cada opción alrededor del panel principal. */
   position: relative;
   bottom: 3rem;
   right: 29rem;
@@ -231,6 +239,7 @@ nav ul li a:hover{
 
 
 footer{
+    /* El pie conserva los datos del sitio y la barra superior muestra el avance. */
   height: 130px;
   min-height: 130px;
   max-height: 130px;

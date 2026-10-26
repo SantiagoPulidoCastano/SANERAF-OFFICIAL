@@ -1,4 +1,5 @@
 :root {
+    /* Colores y tipografías reutilizables para mantener el mismo estilo en el registro. */
   --surface: #fff;
   --surface-2: #f5f0e8;
   --black: #000;
@@ -28,6 +29,7 @@
 }
 
 html, body {
+    /* Quita los márgenes del navegador y prepara la página para centrar el formulario. */
   min-height: 100%;
   margin: 0;
   background-color: var(--grey);
@@ -56,6 +58,7 @@ main {
    CONTENEDOR PRINCIPAL REGISTRO
    ========================================== */
 .registro {
+    /* Divide la tarjeta en dos columnas: una imagen y el formulario. */
   width: 100%;
   max-width: 65rem;
   display: grid;
@@ -70,6 +73,7 @@ main {
 
 /* Imagen lateral */
 .registro-imagen {
+    /* La imagen ocupa su columna sin desbordar el contenedor. */
   min-height: 35rem;
   border-right: 4px solid var(--black);
   overflow: hidden;
@@ -84,6 +88,7 @@ main {
 
 /* Formulario */
 .registro-formulario {
+    /* Centra y espacia el título, las etiquetas y los campos. */
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -117,6 +122,7 @@ main {
 
 /* Inputs neobrutalistas con interacción */
 .registro-formulario input {
+    /* Los campos cambian de aspecto al recibir atención para mostrar dónde se escribe. */
   padding: 0.75rem;
   margin-bottom: 1rem;
   border: 3.5px solid var(--black);
@@ -141,6 +147,7 @@ main {
    CONTENEDOR DE BOTONES (LADO A LADO)
    ========================================== */
 .acciones-registro {
+    /* Agrupa las acciones principales al final del formulario. */
   display: flex;
   gap: 1.5rem; /* Espacio horizontal de separación entre los botones */
   margin-top: 1rem;
@@ -149,6 +156,7 @@ main {
 
 /* Botón Entrar / Registrarse */
 .registro-formulario .acciones-registro button {
+    /* Este botón envía los datos que se escribieron para crear la cuenta. */
   flex: 1;
   font-family: 'Archivo Black', sans-serif;
   font-size: 1rem;
@@ -179,6 +187,7 @@ main {
 
 /* Botón Volver con apariencia de botón idéntico */
 .registro-formulario .acciones-registro a.volver {
+    /* El enlace de regreso tiene apariencia de botón para combinar con la acción principal. */
   flex: 1;
   color: var(--white);
   background-color: var(--red);
@@ -213,6 +222,7 @@ main {
 
 /* Enlace de términos fuera de la tarjeta */
 a.pterms {
+    /* Mantiene el acceso a los términos separado de los campos del registro. */
   display: inline-block;
   margin: 1.5rem auto 2rem auto;
   color: var(--black);
@@ -228,6 +238,7 @@ a.pterms:hover {
 
 /* Ventana emergente (Modal / Dialog) */
 dialog {
+    /* Define el cuadro emergente donde JavaScript presenta mensajes al usuario. */
   position: relative;
   padding: 2rem;
   border: 4px solid var(--black);

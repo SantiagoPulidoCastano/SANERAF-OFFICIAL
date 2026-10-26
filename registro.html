@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- La cabecera prepara el documento y carga el diseño de la página de registro. -->
   <meta charset="UTF-8">
   <title>SANERAF - Registro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +14,14 @@
 <body>
  
 <main>
+  <!-- Este contenedor coloca la imagen y el formulario de registro uno junto al otro. -->
     <div class="registro" id="registro">
       <div class="registro-imagen" id="registro-imagen">
         <img src="IMG/Vertical.png" alt="Imagen de SANERAF">
       </div>
       
       <div class="registro-formulario" id="registro-formulario">
+        <!-- El formulario solicita los datos necesarios para crear una cuenta. -->
         <h2>Regístrate para continuar:</h2>
         <form action="index.html" method="get">
 
@@ -46,6 +49,7 @@
 
 <a href="pterminos.html" id="pterms" class="pterms" alt="pterms">Términos y condiciones</a>
 
+<!-- El cuadro emergente se usa para mostrar avisos de éxito o errores del formulario. -->
 <dialog id="ventana">
   <button type="button" id="ventana-cerrar" class="btn-cerrar">×</button>
   <h3 id="ventana-titulo"></h3>

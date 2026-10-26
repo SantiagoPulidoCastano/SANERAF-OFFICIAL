@@ -1,4 +1,5 @@
 :root {
+    /* Colores y tipografías centralizados para conservar la identidad del sitio. */
   --surface: #fff;
   --surface-2: #f5f0e8;
   --black: #000;
@@ -28,6 +29,7 @@
 }
 
 html, body {
+    /* Quita márgenes predeterminados y prepara el fondo de la pantalla de acceso. */
   min-height: 100%;
   margin: 0;
   background-color: var(--grey);
@@ -56,6 +58,7 @@ main {
    CONTENEDOR PRINCIPAL LOGIN
    ========================================== */
 .login {
+    /* Divide la tarjeta en dos columnas: imagen a un lado y formulario al otro. */
   width: 100%;
   max-width: 65rem;
   display: grid;
@@ -70,6 +73,7 @@ main {
 
 /* Imagen lateral */
 .login-imagen {
+    /* La imagen llena su columna sin salirse del marco. */
   min-height: 32rem;
   border-right: 4px solid var(--black);
   overflow: hidden;
@@ -84,6 +88,7 @@ main {
 
 /* Formulario */
 .login-formulario {
+    /* Alinea y espacia los controles que permiten entrar a la cuenta. */
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -117,6 +122,7 @@ main {
 
 /* Inputs con foco interactivo */
 .login-formulario input {
+    /* El estado de foco resalta el campo donde se está escribiendo. */
   padding: 0.8rem;
   margin-bottom: 1.2rem;
   border: 3.5px solid var(--black);
@@ -138,6 +144,7 @@ main {
 
 /* Botón Entrar (Principal) */
 .login-formulario button {
+    /* Es la acción principal para enviar el usuario y la contraseña. */
   font-family: 'Archivo Black', sans-serif;
   font-size: 1.1rem;
   font-weight: bold;
@@ -166,6 +173,7 @@ main {
 
 /* Grupo de Enlaces */
 .login-formulario a {
+    /* Estos enlaces permiten registrarse, recuperar el acceso o regresar. */
   color: var(--black);
   background-color: var(--white);
   text-decoration: none;
@@ -209,6 +217,7 @@ main {
 
 /* Enlace Términos y Condiciones fuera de la tarjeta */
 a.pterms {
+    /* El enlace legal queda separado de los campos de acceso. */
   display: inline-block;
   margin: 1.5rem auto 2rem auto;
   color: var(--black);
@@ -224,6 +233,7 @@ a.pterms:hover {
 
 /* Ventana emergente (Modal / Dialog) */
 dialog {
+    /* El cuadro emergente muestra mensajes de resultado al iniciar sesión. */
   position: relative;
   padding: 2rem;
   border: 4px solid var(--black);

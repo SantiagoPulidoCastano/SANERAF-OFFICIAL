@@ -1,4 +1,5 @@
 :root {
+    /* Colores y fuentes compartidos para dar unidad a toda la colección. */
   --surface: #fff;
   --surface-2: #f5f0e8;
   --black: #000;
@@ -28,6 +29,7 @@
 }
 
 html {
+    /* Ajusta el fondo y la altura mínima del documento. */
   min-height: 100%;
   margin: 0;
   background-color: var(--grey);
@@ -58,6 +60,7 @@ main {
    NAVEGACIÓN UNIFICADA (ESTILO PÁGINA PRINCIPAL)
    ========================================== */
 nav {
+    /* Organiza la marca y los enlaces y mantiene la barra arriba al desplazarse. */
   position: sticky;
   top: 0;
   z-index: 10;
@@ -136,6 +139,7 @@ nav ul li:nth-child(2) a:hover {
    ESTRUCTURA DE VITRINA Y GALERÍA
    ========================================== */
 .galeria {
+    /* Centra las categorías para presentar las figuras como una colección ordenada. */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,6 +150,7 @@ nav ul li:nth-child(2) a:hover {
 }
 
 .titulo-vitrina {
+    /* Destaca el nombre y el propósito de la vitrina antes de mostrar las figuras. */
   width: 100%;
   max-width: 70%;
   margin: 1rem auto 0 auto;
@@ -173,6 +178,7 @@ nav ul li:nth-child(2) a:hover {
 }
 
 .galeria section {
+    /* Cada sección separa un grupo de figuras pertenecientes a una serie. */
   width: 100%;
   display: flex;
   flex-direction: column; 
@@ -219,6 +225,7 @@ nav ul li:nth-child(2) a:hover {
    TARJETAS DE COLECCIÓN (TRADING CARDS)
    ========================================== */
 .item-figura {
+    /* Cada tarjeta muestra una figura, su nombre y el estado de adquisición. */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -274,6 +281,7 @@ nav ul li:nth-child(2) a:hover {
    FORMULARIO DE PETICIÓN (BUZÓN DE AYUDA)
    ========================================== */
 .ayuda-vitrina {
+    /* Este panel reúne el formulario para sugerir figuras que faltan en el catálogo. */
   width: 100%;
   max-width: 70%;
   margin: 2rem auto;
@@ -376,6 +384,7 @@ nav ul li:nth-child(2) a:hover {
 }
 
 .input-archivo {
+    /* El campo de archivo real se oculta porque se usa una etiqueta visible como control. */
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
@@ -417,6 +426,7 @@ nav ul li:nth-child(2) a:hover {
 }
 
 .contenedor-preview {
+    /* Este espacio reúne la imagen elegida y el control para quitarla. */
   position: relative;
   display: none;
   width: 120px;
@@ -471,6 +481,7 @@ nav ul li:nth-child(2) a:hover {
    FOOTER Y BARRA DE PROGRESO
    ========================================== */
 footer {
+    /* El pie muestra los datos legales y la barra superior indica el avance de lectura. */
   height: 130px;
   min-height: 130px;
   max-height: 130px;

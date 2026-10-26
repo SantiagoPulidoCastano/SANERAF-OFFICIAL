@@ -1,4 +1,5 @@
 :root {
+        /* Colores y fuentes reutilizables para la tarjeta de recuperación. */
     --surface: #fff;
     --surface-2: #f5f0e8;
     --black: #000;
@@ -26,6 +27,7 @@
 }
 
 html, body {
+        /* Ajustes base para centrar el contenido y ocupar al menos toda la pantalla. */
     min-height: 100%;
     margin: 0;
 }
@@ -43,6 +45,7 @@ body {
 }
 
 .card-construccion {
+        /* La tarjeta contiene el aviso de que esta sección todavía está en preparación. */
     background-color: var(--white);
     border: 4px solid var(--black);
     border-radius: 12px;
@@ -54,6 +57,7 @@ body {
 }
 
 .logo {
+        /* Destaca la marca usando la fuente asignada al logotipo. */
     font-family: var(--font-logo);
     font-size: 2.2rem;
     color: var(--black);
@@ -61,6 +65,7 @@ body {
 }
 
 .badge-construccion {
+        /* La etiqueta amarilla permite reconocer rápidamente el estado de la página. */
     display: inline-block;
     background-color: var(--yellow);
     border: 3px solid var(--black);
@@ -73,6 +78,7 @@ body {
 }
 
 h1 {
+        /* El título y el párrafo presentan la noticia y explican qué ocurre. */
     font-family: var(--font-display);
     font-size: 1.5rem;
     color: var(--black);
@@ -87,6 +93,7 @@ p {
 }
 
 .btn-volver {
+        /* Este enlace permite volver al acceso y muestra una respuesta al pasar el cursor. */
     display: inline-block;
     background-color: var(--surface-2);
     color: var(--black);

@@ -1,4 +1,5 @@
 :root {
+    /* Variables para reutilizar colores y familias de letra en el diseño. */
   --surface: #fff;
   --surface-2: #f5f0e8;
   --black: #000;
@@ -29,6 +30,7 @@
 
 
 html,body{
+  /* Quita márgenes por defecto y establece el fondo de la página principal. */
   min-height: 100%;
   margin: 0;
 }
@@ -55,6 +57,7 @@ main{
 }
 
 nav{
+  /* Ordena la marca y los enlaces, y mantiene la navegación visible arriba. */
   position: sticky;
   top: 0;
   z-index: 1;
@@ -113,6 +116,7 @@ nav a.login:active {
 
 
 .banner{
+    /* Una imagen amplia presenta visualmente la identidad del sitio. */
   min-height: 550px;
   background-image: url(IMG/SANERAF-enhanced.gif);
   background-size: cover;
@@ -125,6 +129,7 @@ nav a.login:active {
 }
 
 .conoce {
+    /* Este panel explica qué ofrece SANERAF y contiene el acceso al catálogo. */
   max-width: 900px;
   margin: 3rem auto;
   padding: 0 2rem 2.5rem;
@@ -137,6 +142,7 @@ nav a.login:active {
 }
 
 .conoce h2 {
+  /* Destaca el encabezado de bienvenida dentro del panel principal. */
   color: var(--black); 
   background-color: var(--grey);
   font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
@@ -149,6 +155,7 @@ nav a.login:active {
 }
 
 .conoce p {
+  /* Mantiene legible el texto que explica qué ofrece SANERAF. */
   font-size: 1.1em;
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -156,6 +163,7 @@ nav a.login:active {
 }
 
 .conoce a#conoceboton {
+    /* El enlace se presenta como botón para invitar a conocer los productos. */
   display: inline-block;
   color: var(--black);
   background-color: var(--yellow); 
@@ -183,6 +191,7 @@ nav a.login:active {
 }
 
 footer{
+    /* El pie conserva la información legal y la barra superior muestra el avance. */
   height: 130px;
   min-height: 130px;
   max-height: 130px;

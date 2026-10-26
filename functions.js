@@ -1,7 +1,9 @@
+// Espera a que el navegador termine de crear la página antes de buscar elementos y conectar sus acciones.
 document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 1. BARRA DE PROGRESO DE SCROLL !!!!NO TOCAR!!!!
     // ==========================================
+    // Calcula qué parte de la página ya se recorrió y actualiza la barra superior para mostrar ese avance.
     const processScroll = () => {
         let docElem = document.documentElement,
             docBody = document.body,
@@ -20,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 2. REFERENCIAS GLOBALES PARA MODALES
     // ==========================================
+    // Guarda referencias a las partes del cuadro emergente para poder cambiar su mensaje y cerrarlo luego.
     const modal = document.getElementById('ventana');
     const modalCerrar = document.getElementById('ventana-cerrar');
     const titulo = document.getElementById('ventana-titulo');
@@ -28,17 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 3. LÓGICA DE LOGIN
     // ==========================================
+    // Esta sección solo trabaja en la página que tiene el formulario de inicio de sesión.
     const formLogin = document.querySelector('.login-formulario form');
     if (formLogin) {
         const inputUsuarioLogin = document.getElementById('username-login');
         const inputPasswordLogin = document.getElementById('password-login');
         
         const usuarioGuardado = localStorage.getItem('usuarioGuardado');
+        // Si ya existe un usuario guardado en este navegador, lo escribe en el campo para ahorrar tiempo.
         if (usuarioGuardado && inputUsuarioLogin) {
             inputUsuarioLogin.value = usuarioGuardado;
         }
 
         formLogin.addEventListener('submit', (evento) => {
+            // Evita que el formulario recargue la página: primero se revisan aquí los datos guardados.
             evento.preventDefault();
             
             const usuarioIngresado = inputUsuarioLogin ? inputUsuarioLogin.value.trim() : "";
@@ -47,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const usuarioRegistrado = localStorage.getItem('usuarioGuardado');
             const passwordRegistrada = localStorage.getItem('passwordGuardada');
 
+            // Compara lo escrito con el registro local y muestra un aviso si alguno de los datos no coincide.
             if (usuarioIngresado !== usuarioRegistrado || passwordIngresada !== passwordRegistrada) {
                 if (titulo) titulo.innerText = "Error de Acceso";
                 if (texto) texto.innerText = "Usuario o contraseña incorrectos. Verifica tus datos.";
@@ -76,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 4. LÓGICA DE REGISTRO
     // ==========================================
+    // Comprueba que las dos contraseñas sean iguales y guarda el nuevo usuario en el navegador.
     const formRegistro = document.querySelector('.registro-formulario form');
     if (formRegistro) {
         formRegistro.addEventListener('submit', (evento) => {
@@ -85,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const pass1 = document.getElementById('password-reg').value;
             const pass2 = document.getElementById('passwordconfirm-reg').value;
             
+            // Antes de guardar, confirma que ambas contraseñas se hayan escrito de la misma manera.
             if (pass1 !== pass2) {
                 if (titulo) titulo.innerText = "Error";
                 if (texto) texto.innerText = "Las contraseñas no coinciden. Por favor, revísalas.";
@@ -120,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 5. CONFIGURACIÓN Y PRECIOS DE TIENDA
     // ==========================================
+    // Reúne valores que la tienda puede usar para mostrar precios con la moneda y el formato de Colombia.
     const CONFIG_TIENDA = {
         precioEstandarPorDefecto: 120000, 
         multiplicadorGlobal: 1.0,         
@@ -133,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const productos = document.querySelectorAll(".producto");
+    // Recorre cada producto, toma su precio base y lo presenta como dinero fácil de leer.
     productos.forEach(prod => {
         const spanPrecio = prod.querySelector(".precio");
         if (!spanPrecio) return;
@@ -148,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 6. PREVISUALIZACIÓN DE IMAGEN Y BOTÓN QUITAR (X)
     // ==========================================
+    // Conecta el selector de archivos con la vista previa para revisar la imagen antes de enviar el formulario.
     const inputImagen = document.getElementById('imagen');
     const previewImg = document.getElementById('imagen-previsualizacion');
     const contenedorPreview = document.getElementById('contenedor-preview');

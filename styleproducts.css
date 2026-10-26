@@ -1,4 +1,5 @@
 :root {
+    /* Colores y fuentes reutilizables para mantener el mismo estilo en el catálogo. */
   --surface: #fff;
   --surface-2: #f5f0e8;
   --black: #000;
@@ -28,6 +29,7 @@
 }
 
 html {
+    /* Ajusta el fondo y la altura mínima del documento. */
   min-height: 100%;
   margin: 0;
   background-color: var(--grey);
@@ -52,6 +54,7 @@ main {
    NAVEGACIÓN UNIFICADA
    ========================================== */
 nav {
+    /* Organiza el logotipo y los enlaces en la parte superior de la página. */
   position: sticky;
   top: 0;
   z-index: 10;
@@ -132,6 +135,7 @@ nav ul li:last-child a:hover {
    GALERÍA Y SECCIONES
    ========================================== */
 .galeria {
+    /* Apila las categorías y centra el conjunto del catálogo. */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,6 +146,7 @@ nav ul li:last-child a:hover {
 }
 
 .galeria section {
+    /* Cada sección agrupa productos de una categoría o serie. */
   width: 100%;
   display: flex;
   flex-direction: column; 
@@ -188,6 +193,7 @@ nav ul li:last-child a:hover {
    TARJETAS DE PRODUCTO (ESTILO TRADING CARD)
    ========================================== */
 .producto {
+    /* Cada tarjeta reúne la imagen y el precio base de un producto. */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,6 +208,7 @@ nav ul li:last-child a:hover {
 }
 
 .producto:hover {
+    /* El movimiento leve resalta la tarjeta que se está señalando. */
   transform: translate(-3px, -3px) scale(1.02);
   box-shadow: 7px 7px 0px var(--black);
 }
@@ -216,6 +223,7 @@ nav ul li:last-child a:hover {
 }
 
 .precio {
+    /* Presenta el precio como una etiqueta destacada bajo la imagen. */
   margin-top: 10px;
   font-size: 0.9rem;
   font-weight: 900;
@@ -235,6 +243,7 @@ nav ul li:last-child a:hover {
    FOOTER Y BARRA DE PROGRESO
    ========================================== */
 footer {
+    /* El pie muestra información legal y la barra de arriba acompaña el desplazamiento. */
   height: 130px;
   min-height: 130px;
   max-height: 130px;
